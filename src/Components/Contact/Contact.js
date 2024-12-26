@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import EditForm from './EditForm/EditForm';
-import Notification from './Notification/Notification';
+import EditForm from '../EditForm/EditForm';
+import Notification from '../Notification/Notification';
+import './Contact.css';
 
 const Contact = ({ contacts, onAddContact, onUpdateContact, onDeleteContact, editingContact, setEditingContact }) => {
     const [formData, setFormData] = useState({
@@ -104,7 +105,7 @@ const Contact = ({ contacts, onAddContact, onUpdateContact, onDeleteContact, edi
             </div>
 
             <div className="mt-8">
-                <h3 className="text-xl font-bold mb-4">Contact List</h3>
+                <h2 className="text-xl font-bold mb-4">Contact List</h2>
                 <div className="space-y-4">
                     {contacts.map(contact => (
                         <div key={contact.id}>
